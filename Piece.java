@@ -1,4 +1,3 @@
-
 /**
  * This class is a representation of a Piece
  * A piece has a color and a location on the board.
