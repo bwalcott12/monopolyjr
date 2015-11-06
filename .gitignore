@@ -3,3 +3,10 @@
 /Space.class
 /Board.class
 /Piece.class
+/Player.class
+/Property.class
+/Chance.class
+/ChanceCardManager.class
+/ChanceCard.class
+/Go.class
+/Railroad.class
