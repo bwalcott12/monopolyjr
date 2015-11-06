@@ -14,3 +14,5 @@ public class HelloWorld {
     }
 }
 // eof
+
+// Cats are cool.
