@@ -10,7 +10,7 @@ public abstract class Space
 	private String _name;
 	private int _location;
 	
-	private int Space(String name, int location)
+	public Space(String name, int location)
 	{
 		_name = name;
 		_location = location;
