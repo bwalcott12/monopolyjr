@@ -9,5 +9,24 @@
  *
  */
 public class Tax extends Space {
-
+	
+	private int _taxValue;
+	
+	/**
+	 * Construct the Tax space, with the 
+	 * same constructor as Space, but with the addition
+	 * of a value parameter. This indicated the amout
+	 * the player will be taxed upon landing on the space;
+	 */
+	public Tax(String name, int location, int taxValue, LooseChange moneyPool)
+	{
+		super(name, location));
+		_taxValue = taxValue;
+	}
+	
+	public void performRole(Player player)
+	{
+		player.takeMoney(_taxValue);
+		moneyPool.addToPool(_taxValue);
+	}
 }

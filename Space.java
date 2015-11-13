@@ -5,21 +5,33 @@
  * @author Chase
  *
  */
-public class Space 
+public abstract class Space 
 {
 	private String _name;
 	private int _location;
 	
-	private int Space(String name)
+	public Space(String name, int location)
 	{
-		int location = 0;
-		return location;
+		_name = name;
+		_location = location;
+	}
+	
+	public String getName()
+	{
+		return _name;
+	}
+	
+	public int getLocation()
+	{
+		return _location;
 	}
 	
 	
-	private void performRole(Player player)
-	{
-		
-	}
-
+	/**
+	 * Override this method in order to cause the 
+	 * space to act on a specified player. This can
+	 * be used to cause a player to draw a chance, buy
+	 * a property, or pay money
+	 */
+	//abstract public void performRole(Player player);
 }
