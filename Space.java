@@ -16,11 +16,22 @@ public abstract class Space
 		_location = location;
 	}
 	
+	public String getName()
+	{
+		return _name;
+	}
+	
+	public int getLocation()
+	{
+		return _location;
+	}
+	
+	
 	/**
 	 * Override this method in order to cause the 
 	 * space to act on a specified player. This can
 	 * be used to cause a player to draw a chance, buy
 	 * a property, or pay money
 	 */
-	abstract public void performRole(Player player);
+	//abstract public void performRole(Player player);
 }

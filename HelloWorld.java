@@ -16,10 +16,9 @@ public class HelloWorld {
         System.out.println("Hello, World");
         
         Map<Integer, Space> spaces = new HashMap<Integer, Space>();
-        spaces.put(1, new Space("1", 1));
-        
-        
-        Board theBoard = new Board();
+        spaces.put(1, new Railroad("Blue Railroad", 1));
+        Board theBoard = new Board(spaces);
+        System.out.println("This is a " + theBoard.findSpace(1).getName() + " with location: " + theBoard.findSpace(1).getLocation());
         
     }
 }
