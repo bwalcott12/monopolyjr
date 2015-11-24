@@ -11,6 +11,7 @@
 public class Tax extends Space {
 	
 	private int _taxValue;
+	private LooseChange _moneyPool;
 	
 	/**
 	 * Construct the Tax space, with the 
@@ -20,13 +21,15 @@ public class Tax extends Space {
 	 */
 	public Tax(String name, int location, int taxValue, LooseChange moneyPool)
 	{
-		super(name, location));
+		super(name, location);
 		_taxValue = taxValue;
+		_moneyPool = moneyPool;
 	}
 	
+	@Override
 	public void performRole(Player player)
 	{
 		player.takeMoney(_taxValue);
-		moneyPool.addToPool(_taxValue);
+		_moneyPool.addToPool(_taxValue);
 	}
 }

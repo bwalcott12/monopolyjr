@@ -6,9 +6,9 @@ public class Railroad extends Space
 		super(name, location);
 	}
 
-	//@Override
-	//public void performRole(Player player) 
-	//{
-		// to fill out with role
-	//}
+	@Override
+	public void performRole(Player player) 
+	{
+		player.takeTurn();
+	}
 }

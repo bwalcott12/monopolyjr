@@ -33,5 +33,5 @@ public abstract class Space
 	 * be used to cause a player to draw a chance, buy
 	 * a property, or pay money
 	 */
-	//abstract public void performRole(Player player);
+	abstract public void performRole(Player player);
 }
