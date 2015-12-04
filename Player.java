@@ -137,7 +137,14 @@ public class Player
 	 */
 	public void takeMoney(int money)
 	{
-		_money -= money;
+		if (money > _money)
+		{
+			_money = 0;
+		}
+		else
+		{
+			_money -= money;
+		}
 	}
 	
 	
