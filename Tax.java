@@ -4,12 +4,11 @@
  * 
  * They can receive and give money as well as 
  * take their turn.
- * 
- * @author Chase
- *
  */
-public class Tax extends Space {
+public class Tax extends Space 
+{
 	
+	// attributes
 	private int _taxValue;
 	private LooseChange _moneyPool;
 	
@@ -26,6 +25,12 @@ public class Tax extends Space {
 		_moneyPool = moneyPool;
 	}
 	
+	/**
+	 * This overrides the performRole from space,
+	 * it takes money from the player and adds it
+	 * to the loose change space
+	 * @param player the player that landed on the space
+	 */
 	@Override
 	public void performRole(Player player)
 	{
