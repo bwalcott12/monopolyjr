@@ -33,7 +33,7 @@ public class MonopolyJr {
 
 		JFrame frame = new JFrame();
 
-		icon = new ImageIcon("board_mid.png");
+		icon = new ImageIcon("MonopolyJr/board_mid.png");
 		
 		JLabel label = new JLabel(icon);
 		frame.add(label);
