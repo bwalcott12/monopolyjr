@@ -1,4 +1,9 @@
-# Welcome to the Monopoly Jr Repo!
-Hello team! Welcome to your first ever GitHub repository!. We will be using this repo for Monopoly Jr development GitHub repository for Dr. Wilson's CSIS 321 - Software Engineering.
+# Welcome to our Monopoly Jr game final project for CSIS 321 - Fall 2015 - George Fox University.
+Execute the monopoly.jar file and have fun playing our game! This is an initial release and is by no means completed, some features and/or functionality will be missing. 
 
-Have any questions? Me too... I have very little idea as to anything that I'm doing. So you're not alone!
+Hope everyone enjoys!
+-Brandon Walcott
+-Chase Atkinson
+-Chris Lilley
+-David Tirado
+-McKenna Tornblad
