@@ -47,7 +47,7 @@ public class Player
 		
 		System.out.print("Dice Rolled: " + _previousNumberRolled + "| Money Before: " + _money + "| ");
 		
-		// see if we are going to pass gos
+		// see if we are going to pass go
 		if (_ownsPiece.getLocation().getLocation() + _previousNumberRolled > 31)
 		{
 			getGoMoney();
@@ -63,7 +63,16 @@ public class Player
 			onRailroad = true;
 		}
 		
-		System.out.print("Moved To: " + _ownsPiece.getLocation().getName() + "| ");
+		if (_ownsPiece.getLocation() instanceof Railroad)
+		{
+			System.out.print("Moved To: " + _ownsPiece.getLocation().getName() + "");
+
+		}
+		
+		else
+		{
+			System.out.print("Moved To: " + _ownsPiece.getLocation().getName() + "| ");
+		}
 		
 		// piece performs role on space or player performs role
 		_ownsPiece.getLocation().performRole(this);
