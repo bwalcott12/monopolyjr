@@ -1,6 +1,7 @@
 import java.awt.Color;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 
 /*
 Prints "Hello, World". By tradition, this is everyone's first program.
@@ -12,15 +13,15 @@ Coding is cool, so are cats... mic drop
 
 public class HelloWorld {
 
-    public static void main(String[] args) {
-        // Prints "Hello, World" to the terminal window.
-        System.out.println("Hello, World");
-        
+    public static void main(String[] args) {       
         Map<Integer, Space> spaces = new HashMap<Integer, Space>();
         ChanceCardManager manager = new ChanceCardManager();
         Board theBoard = new Board(spaces);
         LooseChange looseChangeSpace= new LooseChange("LooseChange", 16);
         Lunch lunchSpace = new Lunch("Lunch", 10);
+        Scanner input = new Scanner(System.in);
+        
+        boolean winner = false;
 
         
         // 2 pieces
@@ -70,19 +71,43 @@ public class HelloWorld {
         spaces.put(30, new Property("Blue 1", 30, 5, Color.BLUE, theBoard));
         spaces.put(31, new Property("Blue 2", 31, 5, Color.BLUE, theBoard));
   
-
-        
+        // each player starts with $31 dollars (1x $5, 1x $4, 3
         Piece player1Piece = new Piece(Color.BLUE, theBoard.findSpace(0), theBoard);
         Piece player2Piece = new Piece(Color.RED, theBoard.findSpace(0), theBoard);
-        Player player1 = new Player(player1Piece, 20);
-        Player player2 = new Player(player2Piece, 20);
+        Player player1 = new Player(player1Piece, 5);
+        Player player2 = new Player(player2Piece, 5);
         
-        for (int i = 0; i < 10; i++)
+        // while either player still has money continue the game
+        while (!winner)
         {
-        	System.out.print("Player 1| ");
-        	player1.takeTurn();
-        	System.out.print("Player 2| ");
-        	player2.takeTurn();
+        	if (player1.getMoney() > 0 && player2.getMoney() > 0)
+        	{
+	        	System.out.print("Player 1| Press enter to roll...");
+	        	input.nextLine();
+	        	System.out.print("Player 1| ");
+	        	player1.takeTurn();
+	        	System.out.println("");
+	        	if (player1.getMoney() <= 0)
+	        	{
+	        		System.out.println("Player2 Wins!!!");
+	        		winner = true;
+	        	}
+        	}
+        	
+        	if (player1.getMoney() > 0 && player2.getMoney() > 0)
+        	{
+	        	System.out.print("Player 2| Press enter to roll...");
+	        	input.nextLine();
+	        	System.out.print("Player 2| ");
+	        	player2.takeTurn();
+	        	System.out.println("");
+	        	if (player2.getMoney() <= 0)
+	        	{
+	        		System.out.println("Player1 Wins!!!");
+	        		winner = true;
+	        	}
+        	}
+
         }
         
 /*
