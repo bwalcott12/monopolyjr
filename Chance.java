@@ -31,3 +31,4 @@ public class Chance extends Space
 	}
 
 }
+

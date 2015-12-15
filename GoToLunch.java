@@ -36,3 +36,4 @@ public class GoToLunch extends Tax
 	}
 
 }
+

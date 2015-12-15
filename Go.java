@@ -24,3 +24,4 @@ public class Go extends Space
 	public void performRole(Player player) {}
 
 }
+

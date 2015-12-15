@@ -25,3 +25,4 @@ public class Lunch extends Space
 	@Override
 	public void performRole(Player player) {}
 }
+

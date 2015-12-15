@@ -38,3 +38,5 @@ public class Tax extends Space
 		_moneyPool.addToPool(_taxValue);
 	}
 }
+
+

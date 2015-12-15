@@ -1,7 +1,6 @@
 /**
  * This class is a representation of a Space on the board.
  * A space has a name and location.
- *
  */
 public abstract class Space 
 {
@@ -49,3 +48,4 @@ public abstract class Space
 	 */
 	abstract public void performRole(Player player);
 }
+

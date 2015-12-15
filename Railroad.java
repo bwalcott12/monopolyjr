@@ -25,3 +25,4 @@ public class Railroad extends Space
 		player.takeTurn();
 	}
 }
+

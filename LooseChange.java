@@ -66,3 +66,4 @@ public class LooseChange extends Space
 	}
 
 }
+

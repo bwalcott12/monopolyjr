@@ -72,3 +72,4 @@ public class Piece
 		return _location;
 	}
 }
+
